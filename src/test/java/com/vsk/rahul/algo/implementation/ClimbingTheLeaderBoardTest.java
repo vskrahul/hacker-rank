@@ -19,7 +19,7 @@ public class ClimbingTheLeaderBoardTest {
 
 	static Logger logger = Logger.getLogger(ClimbingTheLeaderBoardTest.class.getName());
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void check() {
 		Scanner in = new Scanner(this.getClass()
 							.getResourceAsStream(String.format("/%s/%s", "implementation", "test_case_2_in.data")));
