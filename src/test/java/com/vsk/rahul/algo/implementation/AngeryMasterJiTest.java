@@ -15,7 +15,7 @@ import junit.framework.Assert;
  */
 public class AngeryMasterJiTest {
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void check() {
 		Scanner in = new Scanner(this.getClass()
 				.getResourceAsStream(String.format("/%s/%s", "implementation", "angry_master_ji_1_IN.data")));
