@@ -29,7 +29,7 @@ public class CircularArrayTest {
             a[a_i] = in.nextInt();
         }
         for(int a0 = 0; a0 < q; a0++){
-            Assert.assertEquals(CircularArray.reverse(a, n, k, in.nextInt()), out.nextInt());
+            Assert.assertEquals(CircularArray.reverse(a, k, in.nextInt()), out.nextInt());
         }
         in.close();
         out.close();
