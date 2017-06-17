@@ -28,8 +28,10 @@ public class CircularArray {
     }
 	
 	public static int reverse(int[] a, int n, int k, int i) {
-		int index =  -1;
-        index = index == 0 ? i == 0 ? 0 : n - 1 : index - 1;
-        return a[index];
+		int r =  k%n;
+        if(i >= r)
+        	return a[i-r];
+        else
+        	return a[a.length + i - r];
 	}
 }
