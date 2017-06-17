@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
  */
 public class CircularArrayTest {
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void check() {
 		Scanner in = new Scanner(this.getClass()
 				.getResourceAsStream(String.format("/%s/%s", "implementation", "circular_array_1_IN.data")));
