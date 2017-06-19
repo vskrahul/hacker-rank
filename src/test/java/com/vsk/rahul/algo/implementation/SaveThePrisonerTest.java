@@ -15,7 +15,7 @@ import junit.framework.Assert;
  */
 public class SaveThePrisonerTest {
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void check() {
 		
 		Scanner in = new Scanner(this.getClass()
