@@ -34,16 +34,15 @@ public class AppendAndDelete {
 		// if matching length is equal to String s length.
 		if(s.length() == match) {
 			// if matching length is equal to String t length, it means s & t are matching completely.
-            if(t.length() == match) {
+            if(t.length() == match)
                 return "Yes";
-            } else {
-            	// If t is not matching with by one character only
-            	// then number of operations should be of evenly divisible by 3.
-                if(t.length() - match == 1)
-                    return  k%3 == 0 ? "Yes" : "No";
-                else
-                    return  k%(t.length() - match) == 0 ? "Yes" : "No";
-            }
+            
+	    	// If t is not matching with by one character only
+			// then number of operations should be of evenly divisible by 3.
+			if(t.length() - match == 1)
+			    return  k%3 == 0 ? "Yes" : "No";
+			
+			return  k%(t.length() - match) == 0 ? "Yes" : "No";
         }
         return s.length() - match + t.length() - match <= k ? "Yes" : "No";
     }
@@ -55,5 +54,6 @@ public class AppendAndDelete {
 		int k = in.nextInt();
 		AppendAndDelete instance = new AppendAndDelete();
 		System.out.print(instance.status(s, t, instance.difference(s, t), k));
+		in.close();
 	}
 }

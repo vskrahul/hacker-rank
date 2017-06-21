@@ -3,15 +3,11 @@
  */
 package com.vsk.rahul.algo.implementation;
 
-import org.testng.log4testng.Logger;
-
 /**
  * @author Rahul
  *
  */
 public class SaveThePrisoner {
-	
-	static Logger logger = Logger.getLogger(SaveThePrisoner.class);
 	
 	static int saveThePrisoner(int n, int m, int s){
         int id = -1;

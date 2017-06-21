@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
  */
 public class AppendAndDeleteTest {
 
-	@Test(enabled = true, testName = "AppendAndDelete")
+	@Test(enabled = false, testName = "AppendAndDelete")
 	public void check() {
 		Scanner in = new Scanner(this.getClass()
 				.getResourceAsStream(String.format("/%s/%s", "implementation", "append_and_delete_1_IN.data")));
