@@ -16,10 +16,10 @@ public class Mathematics {
 	}
 	
 	public static int combinations(int n, int r) {
-		return Mathematics.factorial(n)/(Mathematics.factorial(n-r) * Mathematics.factorial(r));
+		return factorial(n)/(factorial(n-r) * factorial(r));
 	}
 	
 	public static int permutations(int n, int r) {
-		return Mathematics.factorial(n)/Mathematics.factorial(n-r);
+		return factorial(n)/factorial(n-r);
 	}
 }

@@ -14,9 +14,9 @@ import org.testng.annotations.Test;
  */
 public class NumberCombinationsTest {
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void check() {
-		Integer arr[] = new Integer[]{1, 2, 3, 4};
+		int arr[] = new int[]{1, 2, 3, 4};
 		int set = 2;
 		
 		NumberCombinations[] result = NumberCombinations.combinations(arr, set);

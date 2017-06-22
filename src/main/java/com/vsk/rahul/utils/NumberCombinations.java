@@ -9,9 +9,11 @@ package com.vsk.rahul.utils;
  */
 public class NumberCombinations {
 
-	private Integer one;
+	private int one;
 
-	private Integer two;
+	private int two;
+	
+	private int score;
 
 	NumberCombinations(int one, int two) {
 		this.one = one;
@@ -33,7 +35,7 @@ public class NumberCombinations {
 		return false;
 	}
 
-	static NumberCombinations[] combinations(Integer[] arr, int set) {
+	public static NumberCombinations[] combinations(int[] arr, int set) {
 		int comb = Mathematics.combinations(arr.length, set);
 		NumberCombinations[] result = new NumberCombinations[comb];
 		int index = 0;
@@ -45,19 +47,27 @@ public class NumberCombinations {
 		return result;
 	}
 
-	public Integer getOne() {
+	public int getOne() {
 		return one;
 	}
 
-	public void setOne(Integer one) {
+	public void setOne(int one) {
 		this.one = one;
 	}
 
-	public Integer getTwo() {
+	public int getTwo() {
 		return two;
 	}
 
-	public void setTwo(Integer two) {
+	public void setTwo(int two) {
 		this.two = two;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
 	}
 }
