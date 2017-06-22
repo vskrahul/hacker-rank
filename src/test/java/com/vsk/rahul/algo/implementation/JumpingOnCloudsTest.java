@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
  */
 public class JumpingOnCloudsTest {
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void check() {
 		Scanner in = new Scanner(this.getClass()
 				.getResourceAsStream(String.format("/%s/%s", "implementation", "jumping_on_clouds_1_IN.data")));
