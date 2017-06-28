@@ -6,11 +6,21 @@ package com.vsk.rahul.algo.implementation;
 import java.util.Scanner;
 
 /**
- * @author Rahul
+ * <p>AngryMasterJi class.</p>
  *
+ * @author Rahul
+ * @version $Id: $Id
  */
 public class AngryMasterJi {
 
+	/**
+	 * <p>is_class_cancelled.</p>
+	 *
+	 * @param N a int.
+	 * @param K a int.
+	 * @param in a {@link java.util.Scanner} object.
+	 * @return a {@link java.lang.String} object.
+	 */
 	public static String is_class_cancelled(int N, int K, Scanner in) {
 		int student = 0;
 		for(int i = 0; i < N; i++) {

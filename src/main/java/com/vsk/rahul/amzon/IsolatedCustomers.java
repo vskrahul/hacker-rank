@@ -9,8 +9,10 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * @author Rahul
+ * <p>IsolatedCustomers class.</p>
  *
+ * @author Rahul
+ * @version $Id: $Id
  */
 public class IsolatedCustomers {
 	

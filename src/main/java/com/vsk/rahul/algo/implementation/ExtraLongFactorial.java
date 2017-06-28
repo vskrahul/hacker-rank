@@ -6,8 +6,10 @@ package com.vsk.rahul.algo.implementation;
 import java.math.BigInteger;
 
 /**
- * @author Rahul
+ * <p>ExtraLongFactorial class.</p>
  *
+ * @author Rahul
+ * @version $Id: $Id
  */
 public class ExtraLongFactorial {
 
@@ -19,6 +21,11 @@ public class ExtraLongFactorial {
 		return i.multiply(factorial(i.subtract(BigInteger.valueOf(1L))));
 	}
 	
+	/**
+	 * <p>main.</p>
+	 *
+	 * @param args an array of {@link java.lang.String} objects.
+	 */
 	public static void main(String[] args) {
         System.out.print(factorial(BigInteger.valueOf(25L)));
     }

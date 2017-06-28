@@ -14,11 +14,11 @@ import org.testng.annotations.Test;
  */
 public class AcmIcpcTest {
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void check() {
 		Scanner in = new Scanner(this.getClass()
-				.getResourceAsStream(String.format("/%s/%s", "implementation", "acpc_icmp_1_IN.data")));
-		Scanner out = new Scanner(this.getClass().getResourceAsStream(String.format("/%s/%s", "implementation", "acpc_icmp_1_OUT.data"))); 
+				.getResourceAsStream(String.format("/%s/%s", "implementation", "organize_containers_of_balls_IN_1.data")));
+		Scanner out = new Scanner(this.getClass().getResourceAsStream(String.format("/%s/%s", "implementation", "organize_containers_of_balls_OUT_1.data")));
 		
 		int N = in.nextInt();
 		int M = in.nextInt();
@@ -34,8 +34,7 @@ public class AcmIcpcTest {
     		}
         }
 		
-        AcmIcpc instance = new AcmIcpc();
-        int result[] = instance.maxPossibleScore(subjects, M, N);
+        int result[] = AcmIcpc.maxPossibleScore(subjects, M, N);
         Assert.assertEquals(result[0], out.nextInt());
         Assert.assertEquals(result[1], out.nextInt());
 		in.close();

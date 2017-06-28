@@ -4,8 +4,10 @@
 package com.vsk.rahul.algo.implementation;
 
 /**
- * @author Rahul
+ * <p>SaveThePrisoner class.</p>
  *
+ * @author Rahul
+ * @version $Id: $Id
  */
 public class SaveThePrisoner {
 	

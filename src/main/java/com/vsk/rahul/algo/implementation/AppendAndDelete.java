@@ -6,15 +6,17 @@ package com.vsk.rahul.algo.implementation;
 import java.util.Scanner;
 
 /**
- * @author Rahul
+ * <p>AppendAndDelete class.</p>
  *
+ * @author Rahul
+ * @version $Id: $Id
  */
 public class AppendAndDelete {
 
 	/**
 	 * Return the matching length between String s & t.
 	 * It compares from index 0 till no match found.
-	 * 
+	 *
 	 * @param s String 1
 	 * @param t String 2
 	 * @return {@link int} return the matching length
@@ -30,6 +32,15 @@ public class AppendAndDelete {
         return i;
 	}
 
+	/**
+	 * <p>status.</p>
+	 *
+	 * @param s a {@link java.lang.String} object.
+	 * @param t a {@link java.lang.String} object.
+	 * @param match a int.
+	 * @param k a int.
+	 * @return a {@link java.lang.String} object.
+	 */
 	public String status(String s, String t, int match, int k) {
 		// if matching length is equal to String s length.
 		if(s.length() == match) {
@@ -47,6 +58,11 @@ public class AppendAndDelete {
         return s.length() - match + t.length() - match <= k ? "Yes" : "No";
     }
 
+	/**
+	 * <p>main.</p>
+	 *
+	 * @param args an array of {@link java.lang.String} objects.
+	 */
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		String s = in.next();

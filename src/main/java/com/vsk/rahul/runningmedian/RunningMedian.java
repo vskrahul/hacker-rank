@@ -9,8 +9,10 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 /**
- * @author Rahul
+ * <p>RunningMedian class.</p>
  *
+ * @author Rahul
+ * @version $Id: $Id
  */
 public class RunningMedian {
 
@@ -18,6 +20,12 @@ public class RunningMedian {
 	
 	static long[] arr = null;
 	
+	/**
+	 * <p>main.</p>
+	 *
+	 * @param args an array of {@link java.lang.String} objects.
+	 * @throws java.lang.Exception if any.
+	 */
 	public static void main(String args[]) throws Exception {
         
         Scanner in = new Scanner(System.in);
@@ -25,6 +33,12 @@ public class RunningMedian {
         in.close();
     }
 	
+	/**
+	 * <p>start.</p>
+	 *
+	 * @param in a {@link java.util.Scanner} object.
+	 * @return a {@link java.util.List} object.
+	 */
 	public static List<Double> start(Scanner in) {
 		arr = new long[in.nextInt()];
         List<Double> result = new ArrayList<>();

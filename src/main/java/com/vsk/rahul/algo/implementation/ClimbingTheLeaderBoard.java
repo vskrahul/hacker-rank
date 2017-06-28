@@ -4,15 +4,25 @@
 package com.vsk.rahul.algo.implementation;
 
 /**
- * @author Rahul
+ * <p>ClimbingTheLeaderBoard class.</p>
  *
+ * @author Rahul
+ * @version $Id: $Id
  */
 public class ClimbingTheLeaderBoard {
 
+	/** Constant <code>currentIndex</code> */
 	public static int currentIndex;
+	/** Constant <code>scores</code> */
 	public static Player[] scores;
 
 	// return current rank
+	/**
+	 * <p>rank.</p>
+	 *
+	 * @param score a int.
+	 * @return a int.
+	 */
 	public static int rank(int score) {
 
 		Player alice = scores[currentIndex];
@@ -103,6 +113,11 @@ public class ClimbingTheLeaderBoard {
 		}
 	}
 
+	/**
+	 * <p>main.</p>
+	 *
+	 * @param args an array of {@link java.lang.String} objects.
+	 */
 	public static void main(String[] args) {
 		int n = 7; // number of players before Alice.
 		scores = new Player[]{

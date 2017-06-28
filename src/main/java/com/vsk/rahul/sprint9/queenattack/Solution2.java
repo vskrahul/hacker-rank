@@ -8,8 +8,10 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * @author Rahul
+ * <p>Solution2 class.</p>
  *
+ * @author Rahul
+ * @version $Id: $Id
  */
 public class Solution2 {
 
@@ -21,6 +23,11 @@ public class Solution2 {
 	
 	private int N;
 
+	/**
+	 * <p>main.</p>
+	 *
+	 * @param args an array of {@link java.lang.String} objects.
+	 */
 	public static void main(String[] args) {
 
 		Solution2 s = new Solution2();
@@ -186,14 +193,32 @@ class Position2 {
 		this.q = q;
 	}
 
+	/**
+	 * <p>instance.</p>
+	 *
+	 * @param r a int.
+	 * @param q a int.
+	 * @return a {@link com.vsk.rahul.sprint9.queenattack.Position2} object.
+	 */
 	public static Position2 instance(int r, int q) {
         return new Position2(r, q);
     }
 
+	/**
+	 * <p>r.</p>
+	 *
+	 * @return a int.
+	 */
 	public int r() {return r;}
 
+	/**
+	 * <p>q.</p>
+	 *
+	 * @return a int.
+	 */
 	public int q() {return q;}
 
+	/** {@inheritDoc} */
 	@Override
 	public boolean equals(Object o) {
 		Position2 p = null;

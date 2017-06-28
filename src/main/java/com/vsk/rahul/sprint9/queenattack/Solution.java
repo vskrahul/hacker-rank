@@ -8,8 +8,10 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * @author Rahul
+ * <p>Solution class.</p>
  *
+ * @author Rahul
+ * @version $Id: $Id
  */
 public class Solution {
 
@@ -35,6 +37,11 @@ public class Solution {
 	
 	private final List<Position> obstacles = new ArrayList<Position>();
 	
+	/**
+	 * <p>main.</p>
+	 *
+	 * @param args an array of {@link java.lang.String} objects.
+	 */
 	public static void main(String[] args) {
 
 		Solution s = new Solution();
@@ -206,10 +213,20 @@ public class Solution {
 		}
 	}
 
+	/**
+	 * <p>getN.</p>
+	 *
+	 * @return a {@link java.lang.Integer} object.
+	 */
 	public Integer getN() {
 		return N;
 	}
 
+	/**
+	 * <p>setN.</p>
+	 *
+	 * @param n a {@link java.lang.Integer} object.
+	 */
 	public void setN(Integer n) {
 		N = n;
 	}
@@ -221,13 +238,19 @@ public class Solution {
 	public void setQueen(Position queen) {
 		this.queen = queen;
 	}
-
+	
 	public void add_obstacles(Position p) {
 		if(p.q() <= this.N && p.r() < this.N)
 			obstacles.add(p);
 	}
 }
 
+/**
+ * 
+ * 
+ * @author Rahul
+ *
+ */
 class Position {
 
 	private int r; // vertical axis

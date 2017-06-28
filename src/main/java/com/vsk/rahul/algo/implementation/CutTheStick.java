@@ -4,11 +4,18 @@
 package com.vsk.rahul.algo.implementation;
 
 /**
- * @author Rahul
+ * <p>CutTheStick class.</p>
  *
+ * @author Rahul
+ * @version $Id: $Id
  */
 public class CutTheStick {
 
+	/**
+	 * <p>main.</p>
+	 *
+	 * @param args an array of {@link java.lang.String} objects.
+	 */
 	public static void main(String[] args) {
 		int N = 6;
 		int a[] = new int[]{5, 4, 4, 2, 2, 8};

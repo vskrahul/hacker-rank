@@ -6,11 +6,18 @@ package com.vsk.rahul.algo.implementation;
 import java.util.Scanner;
 
 /**
- * @author Rahul
+ * <p>CircularArray class.</p>
  *
+ * @author Rahul
+ * @version $Id: $Id
  */
 public class CircularArray {
 
+	/**
+	 * <p>main.</p>
+	 *
+	 * @param args an array of {@link java.lang.String} objects.
+	 */
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
@@ -33,8 +40,7 @@ public class CircularArray {
 	 * on given array.</p>
 	 * <p>But we are not modifying the array so have to shift back
 	 * by k%a.length; from given index i.</p>
-	 * 
-	 * 
+	 *
 	 * @param a Array
 	 * @param k Number of circular rotations
 	 * @param i Index to find out current value after circular rotation

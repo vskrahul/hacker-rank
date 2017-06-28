@@ -4,11 +4,20 @@
 package com.vsk.rahul.algo.implementation;
 
 /**
- * @author Rahul
+ * <p>JumpingOnClouds class.</p>
  *
+ * @author Rahul
+ * @version $Id: $Id
  */
 public class JumpingOnClouds {
 
+	/**
+	 * <p>jumps.</p>
+	 *
+	 * @param c an array of int.
+	 * @param clouds a int.
+	 * @return a int.
+	 */
 	public int jumps(int c[], int clouds) {
 		int jump = 0;
 		for (int i = 0; i < clouds;) {

@@ -57,6 +57,21 @@
 				</configuration>
 			</plugin>
 
+			<plugin>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.10.4</version>
+				<executions>
+					<execution>
+						<id>javadoc-jar</id>
+						<phase>package</phase>
+						<goals>
+							<!-- <goal>fix</goal> -->
+							<goal>test-javadoc</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 
 		<directory>${project.basedir}/target</directory>
