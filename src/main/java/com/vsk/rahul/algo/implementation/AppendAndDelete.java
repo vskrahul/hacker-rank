@@ -14,7 +14,8 @@ import java.util.Scanner;
 public class AppendAndDelete {
 
 	/**
-	 * Return the matching length between String s & t.
+	 * <p>
+	 * Return the matching length between String s and t.
 	 * It compares from index 0 till no match found.
 	 *
 	 * @param s String 1

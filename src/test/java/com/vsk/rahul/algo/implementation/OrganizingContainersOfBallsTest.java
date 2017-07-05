@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
  */
 public class OrganizingContainersOfBallsTest {
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void test() {
 
 		Scanner in = new Scanner(
