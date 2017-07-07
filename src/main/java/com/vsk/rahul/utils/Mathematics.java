@@ -91,7 +91,26 @@ public class Mathematics {
 	 * @return v^n
 	 */
 	public static long toThePower(int v, int n) {
+		if(n == 0)
+			return 1;
 		long result = v;
+		for(int i = 1; i < n; i++) {
+			result = result * v;
+		}
+		return result;
+	}
+	
+	/**
+	 * Return v to the power of n.
+	 * 
+	 * @param v integer value
+	 * @param n power of value v
+	 * @return v^n
+	 */
+	public static int toThePowerInt(int v, int n) {
+		if(n == 0)
+			return 1;
+		int result = v;
 		for(int i = 1; i < n; i++) {
 			result = result * v;
 		}
