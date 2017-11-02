@@ -1,38 +1,26 @@
 package mypack;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.function.Consumer;
-
-/**
- * <p>
- * Test class.
- * </p>
- *
- * @author Rahul
- * @version $Id: $Id
- */
 public class Test {
 
-	static Set<Integer> set = new HashSet<>();
+	public static void main(String args[]) {
+		int[] arr = new int[]{1,4,8,2,10,9,8,7,6,5,4,3};
 
-	static void f(Set<Integer> set, int i, int n, int v, int a, int b) {
-		if(i == n)
-			set.add(v);
-		else {
-			f(set, i + 1, n, v + a, a, b);
-			f(set, i + 1, n, v + b, a, b);
+		int i = 0, j = 0;
+		int length = 0;
+		
+		for(int x = 0; x < arr.length - 1; x++) {
+			//increasing
+			if(arr[x] <= arr[x + 1]) {
+				//is it old increasing sequence?
+				if(x > 0 && arr[x - 1] > arr[x]) {
+					//no
+					i = x;
+				}
+			}
+			j = x;
+			if(j - i > length)
+				length = j - i;
 		}
+		System.out.println(length + 2);
 	}
-	
-	public static void main(String[] args) {
-		f(set, 1, 4, 0, 10, 100);
-		set.clear();
-		set.stream().sorted().forEach(new Consumer<Integer>() {
-			public void accept(Integer t) {
-				System.out.print(String.format("%d ", t));
-			};
-		});
-	}
-
 }

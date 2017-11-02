@@ -88,4 +88,29 @@ public class StringUtils {
 		}
 		return lexical;
 	}
+	
+	/**
+	 * Return true if given String is Palindrome otherwise return false.
+	 * 
+	 * @param s String
+	 * @return is given String Palindrome?
+	 */
+	public static boolean isPalindrome(String s) {
+		char[] arr = s.toCharArray();
+		int N = s.length();
+		for(int i = 0; i < N/2; i++) {
+            if(arr[i] == arr[N - i - 1])
+                continue;
+            return false;
+        }
+		return true;
+	}
+	
+	public static int[] ascii(String s) {
+        int[] arr = new int[26];
+        for(char c : s.toCharArray()){
+            arr[c - 'a'] = c; 
+        }
+        return arr;
+    }
 }

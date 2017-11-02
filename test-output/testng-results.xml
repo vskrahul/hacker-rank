@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Left Rotation : Before : [1, 2, 3, 4, 5] and After 4 left rotation : [5, 1, 2, 3, 4]]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1648" started-at="2017-11-02T06:35:16Z" finished-at="2017-11-02T06:35:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1648" started-at="2017-11-02T06:35:16Z" finished-at="2017-11-02T06:35:17Z">
+      <class name="com.vsk.rahul.ds.array.ArrayRotationTest">
+        <test-method status="PASS" signature="check()[pri:0, instance:com.vsk.rahul.ds.array.ArrayRotationTest@6b26e945]" name="check" duration-ms="1623" started-at="2017-11-02T00:35:16Z" finished-at="2017-11-02T00:35:17Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Left Rotation : Before : [1, 2, 3, 4, 5] and After 4 left rotation : [5, 1, 2, 3, 4]]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- check -->
+      </class> <!-- com.vsk.rahul.ds.array.ArrayRotationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

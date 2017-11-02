@@ -9,12 +9,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
+ * Unit test case to test {@link GridSearch}
  * @author Rahul
  *
  */
 public class GridSearchTest {
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void test() {
 		Scanner in = new Scanner(this.getClass()
 				.getResourceAsStream(String.format("/%s/%s", "implementation", "grid_search_IN_1.data")));
