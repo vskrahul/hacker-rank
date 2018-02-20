@@ -27,6 +27,11 @@ public class ContactList {
 		}
 	}
 	
+	@Override
+	public String toString() {
+		return root.toString();
+	}
+	
 	public static ContactList instance() {
 		if(Objects.isNull(instance)) {
 			synchronized (ContactList.class) {
@@ -70,11 +75,27 @@ public class ContactList {
 		return current.size;
 	}
 	
+	public int search(String str, boolean prefixOnly) {
+		Node current = root;
+		for(int i = 0; i < str.length(); i++) {
+			Character ch = str.charAt(i);
+			current = current.get(ch);
+			if(Objects.isNull(current))
+				return 0;
+		}
+		return prefixOnly ? current.size : current.node.size() == 0 ? current.size : 0;
+	}
+	
 	static class Node {
 		
 		private Map<Character, Node> node = new HashMap<>();
 		
 		private int size;
+		
+		@Override
+		public String toString() {
+			return String.format("[%s#%d]", node, size);
+		}
 		
 		public void put(Character ch) {
 			node.putIfAbsent(ch, new Node());

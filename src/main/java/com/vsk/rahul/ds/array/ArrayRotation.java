@@ -3,6 +3,8 @@
  */
 package com.vsk.rahul.ds.array;
 
+import java.util.Arrays;
+
 /**
  * @author Rahul
  *
@@ -37,6 +39,8 @@ public class ArrayRotation {
 	public static void rotation(int[] a, int d, boolean leftRotation) {
 		int rotation = d%a.length;
 		
+		int[] sub = Arrays.copyOfRange(a, 0, rotation - 1);
+		
 		int temp2 = a[0];
 		int temp1 = 0;
 		for(int i = 0; i < a.length; i++) {
@@ -61,7 +65,7 @@ public class ArrayRotation {
 	 */
     static int index(int rotation, int index, int N, boolean leftRotation) {
         return leftRotation 
-        		? index < rotation ? N - rotation + index : index - rotation
+        		? index < rotation ? N + (index - rotation) : index - rotation
         		: index + rotation < N ? index + rotation : (index + rotation)%N;
     }
-} 
+}

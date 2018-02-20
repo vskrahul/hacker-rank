@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
  */
 public class ArrayRotationTest {
 
-	@Test(testName = "Array Rotation Test")
+	@Test(testName = "Array Rotation Test", enabled = false)
 	public void check() {
 		
 		Scanner in = new Scanner(this.getClass()
@@ -26,19 +26,26 @@ public class ArrayRotationTest {
 		Scanner out = new Scanner(this.getClass().getResourceAsStream(
 									String.format("/%s/%s", "data_structure/array", "left_rotation_OUT.data")));
 		
-        int n = in.nextInt();
-        int d = in.nextInt();
-        int[] a = new int[n];
-        for(int a_i = 0; a_i < n; a_i++){
-            a[a_i] = in.nextInt();
-        }
-        
-        Reporter.log(String.format("Before rotation %s", Arrays.toString(a)), true);
-        ArrayRotation.rotation(a, d, true);
-        Reporter.log(String.format("After %d left rotation : %s", d, Arrays.toString(a)), true);
-        
-        for (int i = 0; i < a.length; i++) {
-            Assert.assertEquals(out.nextInt(), a[i]);
+		int T = in.nextInt();
+		
+        for(int testCase = 0; testCase < T; testCase++) {
+        	
+        	Reporter.log(String.format("Executing test case %d", testCase), true);
+        	
+        	int n = in.nextInt();
+            int d = in.nextInt();
+            int[] a = new int[n];
+            for(int a_i = 0; a_i < n; a_i++){
+                a[a_i] = in.nextInt();
+            }
+            
+            Reporter.log(String.format("Before rotation %s", Arrays.toString(a)), true);
+            ArrayRotation.rotation(a, d, true);
+            Reporter.log(String.format("After %d left rotation : %s", d, Arrays.toString(a)), true);
+            
+            for (int i = 0; i < a.length; i++) {
+                Assert.assertEquals(out.nextInt(), a[i]);
+            }
         }
 
 

@@ -32,6 +32,21 @@ public class StringUtils {
 		return sb.toString().trim();
 	}
 	
+	public static String toString(long[][] arr) {
+		
+		StringBuffer sb = new StringBuffer();
+		
+		for(int i = arr.length - 1; i >= 0 ; i--) {
+			
+			for(int j = 1; j < arr[0].length; j++) {
+				sb.append(String.format("%d,", arr[i][j]));
+			}
+			sb.append("\n");
+		}
+		
+		return sb.toString();
+	}
+	
 	/**
 	 * <p>
 	 * Return {@link List} of {@link String} containing all possible arrangements
