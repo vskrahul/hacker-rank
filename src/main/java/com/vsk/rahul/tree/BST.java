@@ -3,6 +3,7 @@
  */
 package com.vsk.rahul.tree;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
@@ -144,10 +145,6 @@ public class BST {
 		return 0;
 	}
 	
-	public int height() {
-		return 0;
-	}
-	
 	public int levelHasMaxSum() {
 		return 0;
 	}
@@ -274,34 +271,77 @@ public class BST {
 	}
 	
 	/**
-	 * Height of a node from its most distant leaf
+	 * Calculate the height of given node and its all child nodes,
+	 * and store all of the in a store and return the store.
 	 * 
-	 * @param node {@link Node}
-	 * @return height of the given node
+	 * @return store {@link Map}
 	 */
-	public int height(Node node, Map<Integer, Integer> store) {
-		return height(node, 0, 0, store);
+	public Map<Integer, Integer> heightOfEachNode() {
+		Map<Integer, Integer> store = new HashMap<>();
+		height(this.root, 0, store);
+		return store;
 	}
 	
-	public int heightOfEachNode(Node node, int height) {
+	/**
+	 * Height of the root node.
+	 * 
+	 * @return height of the root node.
+	 */
+	public int height() {
+		return height(this.root, 0);
+	}
+	
+	/**
+	 * Calculate the height of each node individually 
+	 * and store in a Map.
+	 * 
+	 * @param node - root node most of the times.
+	 * @param height  - just pass zero.
+	 * @param store - store to store the height of each node in {value, height} format.
+	 * @return return height of root node + 1
+	 */
+	private int height(Node node, int height, Map<Integer, Integer> store) {
 		if(node == null)
 			return 0;
-		if(isLeaf(node))
+		if(isLeaf(node)) {
+			store.put(node.data, 0);
 			return 1;
-		int left = Integer.max(heightOfEachNode(node.left, height), height);
-		int right = Integer.max(heightOfEachNode(node.right, height), height);
-		return Integer.max(left, right) + left + right;
+		}
+		int left = Integer.max(height(node.left, height, store), height);
+		int right = Integer.max(height(node.right, height, store), height);
+		store.put(node.data, Integer.max(left, right));
+		return Integer.max(left, right) + 1;
 	}
 	
-	private int height(Node node, int height, int max, Map<Integer, Integer> store) {
-		if(node == null)
-			return Integer.max(height, max) - 1;
-		max = Integer.max(height(node.left, height + 1, max, store), max);
-		max = Integer.max(height(node.right, height + 1, max, store), max);
-		store.put(node.data, max);
-		return max;
+	/**
+	 * Calculate height for the given node.
+	 * 
+	 * @param node node to for which height is calculated.
+	 * @param height - just pass zero as a initial value.
+	 * @return height of the given node
+	 */
+	private int height(Node node, int height) {
+		if(node == null || isLeaf(node))
+			return height;
+		
+		if(node.left != null && node.right != null )
+			return Integer.max(height(node.left, height + 1), height(node.right, height + 1));
+		
+		if(node.left != null)
+			return height(node.left, height + 1);
+		
+		if(node.right != null)
+			return height(node.right, height + 1);
+		
+		return 0;
 	}
 	
+	/**
+	 * Check if the given is node is leaf or not.
+	 * 
+	 * @param node node to check if leaf or not?
+	 * @return {@code true} if given node is leaf or {@code false}.
+	 */
 	private boolean isLeaf(Node node) {
 		return node.left == null && node.right == null;
 	}

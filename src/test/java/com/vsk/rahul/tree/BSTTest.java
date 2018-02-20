@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 /**
@@ -30,12 +31,16 @@ public class BSTTest {
 		
 		Map<Integer, Integer> store = new LinkedHashMap<>();
 		
-		int height = bst.height(bst.root(), store);
-		
-		Assert.assertEquals(height, out.nextInt());
+		bst.heightOfEachNode();
 		
 		int sum = store.entrySet().stream().mapToInt(Map.Entry::getValue).sum();
 		
+		int height = store.entrySet().stream().mapToInt(Map.Entry::getValue).max().getAsInt();
+		
+		Reporter.log(String.format("root node height = %d", height), true);
+		Assert.assertEquals(height, out.nextInt());
+		
+		Reporter.log(String.format("Sum of heights = %d", sum), true);
 		Assert.assertEquals(sum, out.nextInt());
 		
 		in.close();
