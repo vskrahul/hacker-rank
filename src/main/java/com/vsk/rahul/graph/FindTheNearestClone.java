@@ -14,7 +14,6 @@ public class FindTheNearestClone {
 	int numberOfVertices;
 	int[] visited;
 	int[] distance;
-	int[] parent;
 	int[] colorTags;
 	
 	public FindTheNearestClone(int numberOfVertices) {
@@ -22,7 +21,6 @@ public class FindTheNearestClone {
 		this.adjacentList = CollectionUtils.initializeAdjacencyListOfFixedSize(numberOfVertices);
 		this.visited = new int[numberOfVertices];
 		this.distance = new int[numberOfVertices];
-		this.parent = new int[numberOfVertices];
 	}
 	
 	void process(int i) {
@@ -40,7 +38,6 @@ public class FindTheNearestClone {
 				if(this.visited[k - 1] == 0) {
 					distance[k - 1] = distance[j - 1] + 1;
 					visited[k - 1] = 1;
-					parent[k - 1] = j;
 					queue.add(k);
 				}
 			}

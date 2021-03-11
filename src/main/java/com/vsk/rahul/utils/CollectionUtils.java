@@ -22,4 +22,13 @@ public class CollectionUtils {
 		
 		return list;
 	}
+	
+	public static <T> List<List<T>> initializeAdjacencyListOfFixedSizeT(int size) {
+		List<List<T>> list = new ArrayList<>(size);
+		
+		for(int i = 0; i < size; i++)
+			list.add(new ArrayList<>());
+		
+		return list;
+	}
 }
