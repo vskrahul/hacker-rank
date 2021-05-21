@@ -32,10 +32,10 @@ public class BFS {
 		
 		while(!queue.isEmpty()) {
 			int j = queue.poll();
-			List<Integer> adjacents = this.adjacentList.get(j - 1);
+			List<Integer> adjacent = this.adjacentList.get(j - 1);
 			
-			for(int k : adjacents) {
-				if(this.visited[k - 1] == 0) {
+			for(int k : adjacent) {
+				if(this.visited[k - 1] != 1) { // not visited
 					distance[k - 1] = distance[j - 1] + 1;
 					visited[k - 1] = 1;
 					parent[k - 1] = j;
@@ -87,8 +87,16 @@ public class BFS {
 		graph.adjacentList.get(9).add(9);
 		
 		graph.process(1);
-		
-		System.out.println(Arrays.toString(graph.distance));
-		System.out.println(Arrays.toString(graph.parent));
+
+		System.out.println("V\tD\tP");
+
+		for(int i = 0; i < graph.adjacentList.size(); i++) {
+			System.out.println(String.format("%d\t%d\t%d", i + 1, graph.distance[i], graph.parent[i]));
+		}
+		int idx = 9;
+		while(idx != 0) {
+			System.out.print(graph.parent[idx] + " -> ");
+			idx = graph.parent[graph.parent[idx] - 1];
+		}
 	}
 }
